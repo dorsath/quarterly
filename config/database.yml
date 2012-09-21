@@ -1,0 +1,15 @@
+defaults: &defaults
+  adapter: mysql
+  username: root
+  password:
+  host: localhost
+
+development:
+  database: whenever_development
+  <<: *defaults
+test:
+  database: whenever_test
+  <<: *defaults
+production:
+  database: whenever_production
+  <<: *defaults

@@ -1,0 +1,7 @@
+h1=t('dashboard.title')
+
+#new_project
+  =form_for Project.new do |f|
+    =f.text_field :name
+    =f.submit t('project.create')
+

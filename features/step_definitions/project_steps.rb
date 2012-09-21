@@ -14,7 +14,7 @@ end
 
 When /^I click on "create project"$/ do 
   within "#new_project" do
-    click_link t('project.create')
+    click_button t('project.create')
   end
 end
 

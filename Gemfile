@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'dm-rails'
+gem 'dm-mysql-adapter'
 gem 'slim'
 gem 'data_mapper'
 
@@ -12,6 +14,9 @@ group :assets do
 end
 
 group :tests do
+  gem 'launchy'
+  gem 'ffaker'
+  gem 'factory_girl'
   gem 'rspec'
   gem 'cucumber-rails'
 end
