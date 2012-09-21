@@ -28,15 +28,16 @@ end
 
 When /^I click on the delete link of the project$/ do
   within ".project_#{@project.id}" do
-    click_link t('actions.delete')
+    click_link t('general.delete')
   end
 end
 
 When /^I confirm$/ do
-  save_and_open_page
-  pending("something should happen here")
+  #step does nothing but is there for the customer
+  # save_and_open_page
+  # pending("something should happen here")
 end
 
 Then /^the project should be deleted$/ do
-  @project.exists?
+  Project.get(@project).should be_nil
 end

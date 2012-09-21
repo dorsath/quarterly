@@ -1,0 +1,9 @@
+table id="projects"
+  tr
+    th=t('project.name')
+    th=t('general.actions')
+  -@projects.each do |project|
+    tr class="project_#{project.id}"
+      td=project.name
+      td=link_to t('general.delete'), projects_path(project), method: :delete, confirm: t('project.confirm_delete')
+

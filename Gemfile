@@ -16,7 +16,7 @@ end
 group :tests do
   gem 'launchy'
   gem 'ffaker'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'rspec'
   gem 'cucumber-rails'
 end

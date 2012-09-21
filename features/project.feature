@@ -8,7 +8,6 @@ Feature: Project
     And I click on "create project"
     Then I should have a new project
 
-  @wip
   Scenario: Delete project
     Given I am logged in
     And I have a project
