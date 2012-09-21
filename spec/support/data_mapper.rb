@@ -2,8 +2,7 @@ require 'data_mapper'
 require 'dm-migrations'
 
 
-def load_models(models = [])
-  models = [models] if models.is_a?(String)
+def load_models(*models)
   models.each do |model|
     require_relative "#{Dir.pwd}/app/models/#{model}"
   end

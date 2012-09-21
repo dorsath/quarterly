@@ -7,4 +7,6 @@ en:
     delete: "Delete"
   project:
     create: "Create new project"
+  story:
+    add: "Add new story"
 

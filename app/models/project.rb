@@ -4,4 +4,5 @@ class Project
   property :id,       Serial
   property :name,     String, required: true
 
+  has n, :stories
 end

@@ -1,2 +1,6 @@
 h1=@project.name
 
+#add_story
+  =form_for [@project, @project.stories.new] do |f|
+    =f.text_field :name
+    =f.submit t('story.add')
