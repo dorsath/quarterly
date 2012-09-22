@@ -2,7 +2,12 @@ class Project
   include DataMapper::Resource
 
   property :id,       Serial
-  property :name,     String, required: true
+  property :name,     Text, required: true
 
   has n, :stories
+
+  def destroy
+    stories.destroy
+    super
+  end
 end

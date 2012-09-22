@@ -7,8 +7,9 @@ Given /^I am at my dashboard$/ do
 end
 
 When /^I fill in the project name$/ do
+  @name = Faker::Lorem.words.join(' ')
   within "#new_project" do
-    fill_in "project[name]", with: Faker::Lorem.words
+    fill_in "project[name]", with: @name
   end
 end
 
@@ -20,6 +21,7 @@ end
 
 Then /^I should have a new project$/ do
   Project.count.should == 1
+  Project.last.name.should eql(@name)
 end
 
 Given /^I have a project$/ do
@@ -34,8 +36,6 @@ end
 
 When /^I confirm$/ do
   #step does nothing but is there for the customer
-  # save_and_open_page
-  # pending("something should happen here")
 end
 
 Then /^the project should be deleted$/ do

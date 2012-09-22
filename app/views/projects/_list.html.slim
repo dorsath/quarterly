@@ -5,5 +5,5 @@ table id="projects"
   -@projects.each do |project|
     tr class="project_#{project.id}"
       td=project.name
-      td=link_to t('general.delete'), projects_path(project), method: :delete, confirm: t('project.confirm_delete')
+      td=link_to t('general.delete'), project_path(project), method: :delete, confirm: t('project.confirm_delete')
 

@@ -7,6 +7,7 @@ en:
     delete: "Delete"
   project:
     create: "Create new project"
+    confirm_delete: "Are you really sure you want to delete this project?"
   story:
     add: "Add new story"
 
