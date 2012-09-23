@@ -1,5 +1,12 @@
 h1=@project.name
 
+#stories
+-@project.stories.each do |story|
+  div class="story_#{story.id}"
+    .story_name=story.name
+    .story_procedure=link_to t('story.start'), start_project_story_path(@project, story)
+
+
 #add_story
   =form_for [@project, @project.stories.new] do |f|
     =f.text_field :name

@@ -1,7 +1,7 @@
 require_relative 'support/data_mapper'
 require_relative 'support/factory_girl'
 
-load_models('project', 'story')
+load_models(:all)
 
 describe Project do
   it "should not save without a title" do

@@ -1,5 +1,6 @@
 Given /^I am logged in$/ do
-  log_in new_user
+  @user = new_user
+  log_in @user
 end
 
 Given /^I am at my dashboard$/ do

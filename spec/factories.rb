@@ -7,5 +7,13 @@ FactoryGirl.define do
 
   factory :story do
     name { Faker::Lorem.sentence }
+    # assignee { User.first || FactoryGirl.create(:user) }
+  end
+
+  factory :repository do
+  end
+
+  factory :user do
+    name {  Faker::Name.name }
   end
 end

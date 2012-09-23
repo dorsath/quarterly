@@ -3,6 +3,6 @@ def log_in(user)
 end
 
 def new_user
-  #no users yet
+  FactoryGirl.create(:user)
 end
 
