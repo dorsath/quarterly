@@ -5,6 +5,7 @@ class Project
   property :name,     Text, required: true
 
   has n, :stories
+  has 1, :repository
 
   def destroy
     stories.destroy

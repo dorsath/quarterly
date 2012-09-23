@@ -10,4 +10,5 @@ en:
     confirm_delete: "Are you really sure you want to delete this project?"
   story:
     add: "Add new story"
+    start: "Start"
 
